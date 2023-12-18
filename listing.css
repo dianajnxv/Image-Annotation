@@ -1,0 +1,132 @@
+:root{
+    --PrimaryColor: hsl(95, 9%, 64%);
+    --HoverColor: #ffd3fd;
+    --paleGreen: hsl(0, 0%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --greyText: rgb(190, 190, 190);
+    --bgColor: hsl(220, 10%, 94%);
+    --inputColor: hsl(330, 12%, 97%);
+    --itemCardColor: hsl(120, 5%, 88%);
+    --itemCardHover: hsl(120, 27%, 87%);
+
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.listingSection{
+    flex-basis: 70%;
+
+    .rightCardd{
+        position: relative;
+        flex-basis: 70%;
+        height: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        h1, p, .btn{
+            z-index: 100;
+        }
+
+        h1{
+            font-size: var(--h1FontSize);
+            color: var(--whiteColor);
+            font-weight: 800;
+        }
+
+        p{
+            padding: 1rem;
+            color: var(--paleGreen);
+            font-weight: 500;
+        }
+
+        .buttons{
+            gap: 1rem;
+
+            .btn{
+                box-shadow: none;
+                padding: .8rem 1.5rem;
+                color: var(--PrimaryColor);
+                border: 2px solid transparent;
+            }
+
+            .transparent{
+                background: none;
+                border: 2px solid var(--paleGreen);
+                color: var(--paleGreen);
+
+                &:hover{
+                    background: hsl(0, 0%, 100%);
+                    color: var(--PrimaryColor);
+                }
+            }
+        }    
+    }
+
+    .heading{
+        width: 100%;
+        justify-content: space-between;
+        
+        h1{
+            font-size: var(--h2FontSize);
+            color: var(--blackColor);
+            font-weight: 700;
+        }
+
+        .btn{
+            border: 1px solid transparent;
+            font-weight: 500;
+        }
+        .btn:hover{
+            border: 1px solid white;
+        }
+    }
+
+    .secContainer{
+        width: 100%;
+        margin: 1rem 0;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .singleItem{
+            position: relative;
+            width: 150px;
+            height: 170px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+            border-radius: 10px;
+            background: var(--itemCardColor);
+
+            &:hover{
+                background: var(--itemCardHover);
+                box-shadow: 0 2px 2px var(--inputColor);
+            }
+
+            img{
+                max-width: 100px;
+            }
+
+            .icon{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: var(--PrimaryColor);
+            }
+        }
+    }
+}
